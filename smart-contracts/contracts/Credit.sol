@@ -1,4 +1,4 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.5.16;
 
 import './common/SafeMath.sol';
 import './common/Destructible.sol';
@@ -165,7 +165,7 @@ contract Credit is Destructible {
       * @param _requestedRepayments Requested number of repayments.
       * @param _description Credit description.
       */
-    function Credit(uint _requestedAmount, uint _requestedRepayments, uint _interest, bytes32 _description) public {
+    constructor(uint _requestedAmount, uint _requestedRepayments, uint _interest, bytes32 _description) public {
 
         /** Set the borrower of the contract to the tx.origin
           * We are using tx.origin, because the contract is going to be published
